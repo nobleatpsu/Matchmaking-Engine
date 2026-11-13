@@ -1,0 +1,193 @@
+{
+  "$defs": {
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "text",
+        "provenance"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceKind": {
+      "enum": [
+        "publication",
+        "grant",
+        "patent",
+        "sbir_sttr",
+        "statement",
+        "engagement",
+        "company_signal",
+        "profile_stat"
+      ],
+      "title": "EvidenceKind",
+      "type": "string"
+    },
+    "EvidenceStatus": {
+      "enum": [
+        "active",
+        "completed",
+        "pending",
+        "granted"
+      ],
+      "title": "EvidenceStatus",
+      "type": "string"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        }
+      },
+      "required": [
+        "source_type",
+        "source_ref",
+        "retrieved_at"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "cv",
+        "company_site",
+        "grant_db",
+        "patent_db",
+        "ott",
+        "cec_list",
+        "synthetic",
+        "sec_filing",
+        "job_posting",
+        "social_post",
+        "news",
+        "market_data",
+        "profile",
+        "openalex",
+        "linkedin"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "minLength": 1,
+      "pattern": "^\\S+$",
+      "title": "Id",
+      "type": "string"
+    },
+    "display_name": {
+      "minLength": 1,
+      "title": "Display Name",
+      "type": "string"
+    },
+    "unit": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Unit"
+    },
+    "research_areas": {
+      "default": [],
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Research Areas",
+      "type": "array"
+    },
+    "evidence": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "provenance"
+  ],
+  "title": "ResearcherProfile",
+  "type": "object"
+}

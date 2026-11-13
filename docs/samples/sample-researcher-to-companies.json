@@ -1,0 +1,545 @@
+{
+  "schema_version": "0.1-draft",
+  "note": "ILLUSTRATIVE SAMPLE. Hand-written from fictional data to show the shape. The field names may change before spec 001 is approved.",
+  "workflow": "researcher_to_companies",
+  "synthetic": true,
+  "generated_at": "2026-10-19T12:00:00Z",
+  "query": {
+    "id": "res-ellis",
+    "kind": "researcher",
+    "display_name": "Dr. Morgan Ellis (synthetic)",
+    "summary": "Materials Science and Engineering. Additive manufacturing, ceramic matrix composites, high-temperature coatings."
+  },
+  "results": [
+    {
+      "rank": 1,
+      "candidate": {
+        "id": "co-ge-aerospace",
+        "display_name": "GE Aerospace",
+        "kind": "company",
+        "detail": "Relationship: unknown"
+      },
+      "match": {
+        "query_id": "res-ellis",
+        "candidate_id": "co-ge-aerospace",
+        "score": 86,
+        "band": "strong",
+        "breakdown": {
+          "topical_fit": 88,
+          "recency": 95,
+          "evidence_strength": 70,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "GE Aerospace lists high-temperature coatings, ceramic matrix composites, and metal additive manufacturing. Dr. Ellis's research covers all three.",
+            "evidence_ids": [
+              "ev-ge-interests",
+              "ev-ellis-areas"
+            ]
+          },
+          {
+            "text": "An active NASA grant on qualifying printed hot-section components and a 2024 paper on oxidation of environmental barrier coatings on SiC/SiC composites show current work in this area.",
+            "evidence_ids": [
+              "ev-ellis-grant-nasa",
+              "ev-ellis-pub-eba"
+            ]
+          },
+          {
+            "text": "A patent application on a multilayer oxidation-resistant coating for ceramic composites is pending, so any licensing conversation depends on its status, which this tool has not verified.",
+            "evidence_ids": [
+              "ev-ellis-patent-coating"
+            ]
+          },
+          {
+            "text": "The CV states openness to sponsored research and licensing. This is the researcher's own statement, not confirmed availability.",
+            "evidence_ids": [
+              "ev-ellis-engagement"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "THIN_EVIDENCE",
+            "note": "The company side rests on a one-line interest list. No other source was used."
+          },
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    },
+    {
+      "rank": 2,
+      "candidate": {
+        "id": "co-boeing",
+        "display_name": "Boeing",
+        "kind": "company",
+        "detail": "Relationship: unknown"
+      },
+      "match": {
+        "query_id": "res-ellis",
+        "candidate_id": "co-boeing",
+        "score": 78,
+        "band": "strong",
+        "breakdown": {
+          "topical_fit": 78,
+          "recency": 95,
+          "evidence_strength": 62,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "Boeing lists aerospace materials and additive manufacturing. Dr. Ellis works on metal additive manufacturing and on qualifying printed aerospace parts under an active NASA grant.",
+            "evidence_ids": [
+              "ev-boeing-interests",
+              "ev-ellis-grant-nasa"
+            ]
+          },
+          {
+            "text": "Boeing's composites interest is structural composites. Dr. Ellis's work is on ceramic matrix composites, a related but different class, so this part of the fit is partial.",
+            "evidence_ids": [
+              "ev-boeing-interests",
+              "ev-ellis-areas"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "THIN_EVIDENCE",
+            "note": "The company side rests on a one-line interest list. No other source was used."
+          },
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    },
+    {
+      "rank": 3,
+      "candidate": {
+        "id": "co-lockheed-martin",
+        "display_name": "Lockheed Martin",
+        "kind": "company",
+        "detail": "Relationship: unknown"
+      },
+      "match": {
+        "query_id": "res-ellis",
+        "candidate_id": "co-lockheed-martin",
+        "score": 74,
+        "band": "moderate",
+        "breakdown": {
+          "topical_fit": 70,
+          "recency": 90,
+          "evidence_strength": 68,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "Lockheed Martin lists hypersonics and thermal protection materials. Dr. Ellis is co-PI on an AFRL project on durable coatings for reusable hypersonic vehicles.",
+            "evidence_ids": [
+              "ev-lockheed-interests",
+              "ev-ellis-grant-afrl"
+            ]
+          },
+          {
+            "text": "That grant is listed as running to 2026, so its status should be checked before outreach.",
+            "evidence_ids": [
+              "ev-ellis-grant-afrl"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "THIN_EVIDENCE",
+            "note": "The company side rests on a one-line interest list. No other source was used."
+          },
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    },
+    {
+      "rank": 4,
+      "candidate": {
+        "id": "co-corning",
+        "display_name": "Corning",
+        "kind": "company",
+        "detail": "Relationship: unknown"
+      },
+      "match": {
+        "query_id": "res-ellis",
+        "candidate_id": "co-corning",
+        "score": 52,
+        "band": "moderate",
+        "breakdown": {
+          "topical_fit": 45,
+          "recency": 85,
+          "evidence_strength": 38,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "Corning lists optical coatings and specialty glass. Dr. Ellis works on coatings, but for high-temperature oxidation resistance, not optical use. The overlap is in the word 'coatings' more than in the application.",
+            "evidence_ids": [
+              "ev-corning-interests",
+              "ev-ellis-pub-eba"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "THIN_EVIDENCE",
+            "note": "The company side rests on a one-line interest list. No other source was used."
+          },
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    },
+    {
+      "rank": 5,
+      "candidate": {
+        "id": "co-nvidia",
+        "display_name": "NVIDIA",
+        "kind": "company",
+        "detail": "Relationship: unknown"
+      },
+      "match": {
+        "query_id": "res-ellis",
+        "candidate_id": "co-nvidia",
+        "score": 25,
+        "band": "weak",
+        "breakdown": {
+          "topical_fit": 12,
+          "recency": 70,
+          "evidence_strength": 20,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "Little overlap. NVIDIA's interests (edge AI, low-power inference, robotics) do not appear in Dr. Ellis's research areas. The closest link is a 2023 paper on machine-learning porosity detection, which is a weak connection.",
+            "evidence_ids": [
+              "ev-nvidia-interests",
+              "ev-ellis-pub-ml"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "THIN_EVIDENCE",
+            "note": "The company side rests on a one-line interest list. No other source was used."
+          },
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    },
+    {
+      "rank": null,
+      "candidate": {
+        "id": "co-placeholder",
+        "display_name": "Placeholder Co (synthetic)",
+        "kind": "company",
+        "detail": "Relationship: unknown"
+      },
+      "match": {
+        "query_id": "res-ellis",
+        "candidate_id": "co-placeholder",
+        "score": null,
+        "band": "insufficient",
+        "breakdown": {
+          "topical_fit": null,
+          "recency": null,
+          "evidence_strength": null,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [],
+        "uncertainty": [
+          {
+            "code": "THIN_EVIDENCE",
+            "note": "Nothing is known about this company's focus areas, so no judgment was made."
+          },
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    }
+  ],
+  "evidence": {
+    "ev-ellis-areas": {
+      "id": "ev-ellis-areas",
+      "kind": "statement",
+      "text": "Research interests: metal additive manufacturing; in-situ process monitoring; ceramic matrix composites; high-temperature oxidation-resistant coatings; qualification of printed aerospace parts.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-grant-nasa": {
+      "id": "ev-ellis-grant-nasa",
+      "kind": "grant",
+      "text": "PI, 'Qualification Pathways for Printed Hot-Section Components', NASA, 2024-2027.",
+      "date": "2024",
+      "status": "active",
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-grant-afrl": {
+      "id": "ev-ellis-grant-afrl",
+      "kind": "grant",
+      "text": "Co-PI, 'Durable Coatings for Reusable Hypersonic Vehicles', AFRL, 2023-2026.",
+      "date": "2023",
+      "status": "active",
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-pub-eba": {
+      "id": "ev-ellis-pub-eba",
+      "kind": "publication",
+      "text": "'Oxidation behavior of environmental barrier coatings on SiC/SiC composites', Acta Materialia, 2024.",
+      "date": "2024",
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-pub-ml": {
+      "id": "ev-ellis-pub-ml",
+      "kind": "publication",
+      "text": "'Machine-learning detection of porosity from in-situ thermal imaging', Journal of Materials Processing Technology, 2023.",
+      "date": "2023",
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-patent-coating": {
+      "id": "ev-ellis-patent-coating",
+      "kind": "patent",
+      "text": "'Multilayer oxidation-resistant coating for ceramic composites', U.S. patent application.",
+      "date": "2025",
+      "status": "pending",
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-engagement": {
+      "id": "ev-ellis-engagement",
+      "kind": "engagement",
+      "text": "Co-authored a 2023 paper with engineers from an aerospace engine manufacturer. The CV states: 'Open to sponsored research and licensing discussions'.",
+      "date": "2023",
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ge-interests": {
+      "id": "ev-ge-interests",
+      "kind": "statement",
+      "text": "GE Aerospace: high-temperature coatings, ceramic matrix composites, metal additive manufacturing.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-partner-list (illustrative)",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-boeing-interests": {
+      "id": "ev-boeing-interests",
+      "kind": "statement",
+      "text": "Boeing: aerospace materials, additive manufacturing, structural composites.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-partner-list (illustrative)",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-lockheed-interests": {
+      "id": "ev-lockheed-interests",
+      "kind": "statement",
+      "text": "Lockheed Martin: hypersonics, thermal protection materials, RF sensing.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-partner-list (illustrative)",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-corning-interests": {
+      "id": "ev-corning-interests",
+      "kind": "statement",
+      "text": "Corning: photonics, specialty glass, optical coatings.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-partner-list (illustrative)",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-nvidia-interests": {
+      "id": "ev-nvidia-interests",
+      "kind": "statement",
+      "text": "NVIDIA: edge AI, low-power inference, robotics.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-partner-list (illustrative)",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    }
+  }
+}

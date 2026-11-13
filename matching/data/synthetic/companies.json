@@ -1,0 +1,263 @@
+[
+  {
+    "id": "co-boeing",
+    "name": "Boeing",
+    "focus_areas": [
+      "aerospace materials",
+      "additive manufacturing",
+      "structural composites"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-boeing-interests",
+        "kind": "statement",
+        "text": "Boeing: aerospace materials, additive manufacturing, structural composites.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-merck",
+    "name": "Merck",
+    "focus_areas": [
+      "oncology",
+      "targeted protein degradation",
+      "drug delivery"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-merck-interests",
+        "kind": "statement",
+        "text": "Merck: oncology, targeted protein degradation, drug delivery.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-corning",
+    "name": "Corning",
+    "focus_areas": [
+      "photonics",
+      "specialty glass",
+      "optical coatings"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-corning-interests",
+        "kind": "statement",
+        "text": "Corning: photonics, specialty glass, optical coatings.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-lockheed-martin",
+    "name": "Lockheed Martin",
+    "focus_areas": [
+      "hypersonics",
+      "thermal protection materials",
+      "RF sensing"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-lockheed-interests",
+        "kind": "statement",
+        "text": "Lockheed Martin: hypersonics, thermal protection materials, RF sensing.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-dow",
+    "name": "Dow",
+    "focus_areas": [
+      "sustainable chemistry",
+      "PFAS remediation",
+      "carbon capture"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-dow-interests",
+        "kind": "statement",
+        "text": "Dow: sustainable chemistry, PFAS remediation, carbon capture.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-nvidia",
+    "name": "NVIDIA",
+    "focus_areas": [
+      "edge AI",
+      "low-power inference",
+      "robotics"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-nvidia-interests",
+        "kind": "statement",
+        "text": "NVIDIA: edge AI, low-power inference, robotics.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-pfizer",
+    "name": "Pfizer",
+    "focus_areas": [
+      "mRNA delivery",
+      "lipid nanoparticles",
+      "decentralized clinical trials"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-pfizer-interests",
+        "kind": "statement",
+        "text": "Pfizer: mRNA delivery, lipid nanoparticles, decentralized clinical trials.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-ge-aerospace",
+    "name": "GE Aerospace",
+    "focus_areas": [
+      "high-temperature coatings",
+      "ceramic matrix composites",
+      "metal additive manufacturing"
+    ],
+    "relationship": "unknown",
+    "evidence": [
+      {
+        "id": "ev-ge-interests",
+        "kind": "statement",
+        "text": "GE Aerospace: high-temperature coatings, ceramic matrix composites, metal additive manufacturing.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-partner-list (illustrative)",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-partner-list (illustrative)",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "co-placeholder",
+    "name": "Placeholder Co (synthetic)",
+    "focus_areas": [],
+    "relationship": "unknown",
+    "evidence": [],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "illustrative placeholder with no known focus areas",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  }
+]

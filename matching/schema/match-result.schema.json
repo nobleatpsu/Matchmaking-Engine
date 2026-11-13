@@ -1,0 +1,722 @@
+{
+  "$defs": {
+    "Band": {
+      "enum": [
+        "strong",
+        "moderate",
+        "weak",
+        "insufficient"
+      ],
+      "title": "Band",
+      "type": "string"
+    },
+    "Breakdown": {
+      "additionalProperties": false,
+      "properties": {
+        "topical_fit": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Topical Fit"
+        },
+        "recency": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Recency"
+        },
+        "evidence_strength": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Evidence Strength"
+        },
+        "company_quality": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Company Quality"
+        },
+        "psu_link": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Psu Link"
+        },
+        "weights": {
+          "$ref": "#/$defs/Weights"
+        }
+      },
+      "required": [
+        "topical_fit",
+        "recency",
+        "evidence_strength",
+        "weights"
+      ],
+      "title": "Breakdown",
+      "type": "object"
+    },
+    "Candidate": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "display_name": {
+          "minLength": 1,
+          "title": "Display Name",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/CandidateKind"
+        },
+        "detail": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Detail"
+        }
+      },
+      "required": [
+        "id",
+        "display_name",
+        "kind"
+      ],
+      "title": "Candidate",
+      "type": "object"
+    },
+    "CandidateKind": {
+      "enum": [
+        "company",
+        "researcher"
+      ],
+      "title": "CandidateKind",
+      "type": "string"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/EvidenceKind"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provenance": {
+          "$ref": "#/$defs/Provenance"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "text",
+        "provenance"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceKind": {
+      "enum": [
+        "publication",
+        "grant",
+        "patent",
+        "sbir_sttr",
+        "statement",
+        "engagement",
+        "company_signal",
+        "profile_stat"
+      ],
+      "title": "EvidenceKind",
+      "type": "string"
+    },
+    "EvidenceStatus": {
+      "enum": [
+        "active",
+        "completed",
+        "pending",
+        "granted"
+      ],
+      "title": "EvidenceStatus",
+      "type": "string"
+    },
+    "FlagCode": {
+      "enum": [
+        "STALE_PROFILE",
+        "THIN_EVIDENCE",
+        "NO_RECENT_ACTIVITY",
+        "SINGLE_PROJECT",
+        "BASELINE_DISAGREES",
+        "SYNTHETIC_DATA",
+        "NEGATIVE_SIGNAL",
+        "CONFLICTING_SIGNALS",
+        "NOT_OPEN_TO_INDUSTRY"
+      ],
+      "title": "FlagCode",
+      "type": "string"
+    },
+    "Match": {
+      "additionalProperties": false,
+      "properties": {
+        "query_id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "title": "Query Id",
+          "type": "string"
+        },
+        "candidate_id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "title": "Candidate Id",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Score"
+        },
+        "band": {
+          "$ref": "#/$defs/Band"
+        },
+        "breakdown": {
+          "$ref": "#/$defs/Breakdown"
+        },
+        "headline": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Headline"
+        },
+        "reasons": {
+          "items": {
+            "$ref": "#/$defs/Reason"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "uncertainty": {
+          "items": {
+            "$ref": "#/$defs/UncertaintyFlag"
+          },
+          "title": "Uncertainty",
+          "type": "array"
+        },
+        "not_checked": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Not Checked",
+          "type": "array"
+        },
+        "method": {
+          "$ref": "#/$defs/Method"
+        },
+        "generated_at": {
+          "format": "date-time",
+          "title": "Generated At",
+          "type": "string"
+        },
+        "synthetic": {
+          "title": "Synthetic",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "query_id",
+        "candidate_id",
+        "score",
+        "band",
+        "breakdown",
+        "reasons",
+        "uncertainty",
+        "not_checked",
+        "method",
+        "generated_at",
+        "synthetic"
+      ],
+      "title": "Match",
+      "type": "object"
+    },
+    "Method": {
+      "additionalProperties": false,
+      "properties": {
+        "scorer": {
+          "minLength": 1,
+          "title": "Scorer",
+          "type": "string"
+        },
+        "scorer_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scorer Version"
+        },
+        "model_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Id"
+        },
+        "prompt_version": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Version"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        }
+      },
+      "required": [
+        "scorer"
+      ],
+      "title": "Method",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        }
+      },
+      "required": [
+        "source_type",
+        "source_ref",
+        "retrieved_at"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "Query": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/QueryKind"
+        },
+        "display_name": {
+          "minLength": 1,
+          "title": "Display Name",
+          "type": "string"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "evidence_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "^\\S+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Id"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "display_name",
+        "summary"
+      ],
+      "title": "Query",
+      "type": "object"
+    },
+    "QueryKind": {
+      "enum": [
+        "company_need",
+        "researcher"
+      ],
+      "title": "QueryKind",
+      "type": "string"
+    },
+    "Reason": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "evidence_ids"
+      ],
+      "title": "Reason",
+      "type": "object"
+    },
+    "ResultEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "rank": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rank"
+        },
+        "candidate": {
+          "$ref": "#/$defs/Candidate"
+        },
+        "match": {
+          "$ref": "#/$defs/Match"
+        }
+      },
+      "required": [
+        "rank",
+        "candidate",
+        "match"
+      ],
+      "title": "ResultEntry",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "cv",
+        "company_site",
+        "grant_db",
+        "patent_db",
+        "ott",
+        "cec_list",
+        "synthetic",
+        "sec_filing",
+        "job_posting",
+        "social_post",
+        "news",
+        "market_data",
+        "profile",
+        "openalex",
+        "linkedin"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    },
+    "UncertaintyFlag": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/FlagCode"
+        },
+        "note": {
+          "minLength": 1,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "note"
+      ],
+      "title": "UncertaintyFlag",
+      "type": "object"
+    },
+    "Weights": {
+      "additionalProperties": false,
+      "description": "The weights actually used. A component that was unknown has weight 0.",
+      "properties": {
+        "topical_fit": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Topical Fit",
+          "type": "number"
+        },
+        "recency": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Recency",
+          "type": "number"
+        },
+        "evidence_strength": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Evidence Strength",
+          "type": "number"
+        },
+        "company_quality": {
+          "default": 0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Company Quality",
+          "type": "number"
+        },
+        "psu_link": {
+          "default": 0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Psu Link",
+          "type": "number"
+        }
+      },
+      "required": [
+        "topical_fit",
+        "recency",
+        "evidence_strength"
+      ],
+      "title": "Weights",
+      "type": "object"
+    },
+    "Workflow": {
+      "enum": [
+        "researcher_to_companies",
+        "company_need_to_researchers"
+      ],
+      "title": "Workflow",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One result file: the ranked matches for one query, plus what a screen needs to show them.",
+  "properties": {
+    "schema_version": {
+      "minLength": 1,
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "note": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Note"
+    },
+    "workflow": {
+      "$ref": "#/$defs/Workflow"
+    },
+    "synthetic": {
+      "title": "Synthetic",
+      "type": "boolean"
+    },
+    "run_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Run Id"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "query": {
+      "$ref": "#/$defs/Query"
+    },
+    "results": {
+      "items": {
+        "$ref": "#/$defs/ResultEntry"
+      },
+      "title": "Results",
+      "type": "array"
+    },
+    "evidence": {
+      "patternProperties": {
+        "^\\S+$": {
+          "$ref": "#/$defs/Evidence"
+        }
+      },
+      "propertyNames": {
+        "minLength": 1
+      },
+      "title": "Evidence",
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "workflow",
+    "synthetic",
+    "generated_at",
+    "query",
+    "results",
+    "evidence"
+  ],
+  "title": "MatchResultSet",
+  "type": "object"
+}

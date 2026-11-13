@@ -1,0 +1,236 @@
+{
+  "schema_version": "0.1-draft",
+  "note": "ILLUSTRATIVE SAMPLE. Hand-written from fictional data to show the shape. The field names may change before spec 001 is approved.",
+  "workflow": "company_need_to_researchers",
+  "synthetic": true,
+  "generated_at": "2026-10-19T12:00:00Z",
+  "query": {
+    "id": "need-001",
+    "kind": "company_need",
+    "display_name": "Illustrative need",
+    "summary": "Illustrative need: a turbine-engine supplier wants a university partner to improve oxidation-resistant coatings on ceramic matrix composite hot-section parts and to qualify additively manufactured components.",
+    "evidence_id": "ev-need-001"
+  },
+  "results": [
+    {
+      "rank": 1,
+      "candidate": {
+        "id": "res-ellis",
+        "display_name": "Dr. Morgan Ellis (synthetic)",
+        "kind": "researcher",
+        "detail": "Materials Science and Engineering, College of Engineering"
+      },
+      "match": {
+        "query_id": "need-001",
+        "candidate_id": "res-ellis",
+        "score": 92,
+        "band": "strong",
+        "breakdown": {
+          "topical_fit": 92,
+          "recency": 95,
+          "evidence_strength": 88,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "The need names oxidation-resistant coatings on ceramic matrix composites and qualification of printed parts. Dr. Ellis lists both as research areas.",
+            "evidence_ids": [
+              "ev-need-001",
+              "ev-ellis-areas"
+            ]
+          },
+          {
+            "text": "A 2024 paper on oxidation of environmental barrier coatings on SiC/SiC composites and a pending patent application on a multilayer oxidation-resistant coating for ceramic composites match the coating work.",
+            "evidence_ids": [
+              "ev-ellis-pub-eba",
+              "ev-ellis-patent-coating"
+            ]
+          },
+          {
+            "text": "An active NASA grant on qualifying printed hot-section components matches the qualification work.",
+            "evidence_ids": [
+              "ev-ellis-grant-nasa"
+            ]
+          },
+          {
+            "text": "The CV states openness to sponsored research. This is the researcher's own statement, not confirmed availability.",
+            "evidence_ids": [
+              "ev-ellis-engagement"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    },
+    {
+      "rank": 2,
+      "candidate": {
+        "id": "res-rivera",
+        "display_name": "Dr. Jordan Rivera (synthetic)",
+        "kind": "researcher",
+        "detail": "Biomedical Engineering, College of Engineering"
+      },
+      "match": {
+        "query_id": "need-001",
+        "candidate_id": "res-rivera",
+        "score": 25,
+        "band": "weak",
+        "breakdown": {
+          "topical_fit": 5,
+          "recency": 95,
+          "evidence_strength": 15,
+          "weights": {
+            "topical_fit": 0.6,
+            "recency": 0.2,
+            "evidence_strength": 0.2
+          }
+        },
+        "reasons": [
+          {
+            "text": "No overlap found. Dr. Rivera's research is in nanoparticle drug delivery and wearable sensing, which does not relate to this need.",
+            "evidence_ids": [
+              "ev-need-001",
+              "ev-rivera-areas"
+            ]
+          }
+        ],
+        "uncertainty": [
+          {
+            "code": "SYNTHETIC_DATA",
+            "note": "Built from fictional sample data. Not real people or companies' needs."
+          }
+        ],
+        "not_checked": [
+          "Conflict of interest",
+          "Export control",
+          "Faculty availability and interest",
+          "IP ownership and licensing status"
+        ],
+        "method": {
+          "scorer": "hand-written-example",
+          "note": "Illustrative file written by hand to show the shape. Not produced by the matching code.",
+          "model_id": null,
+          "prompt_version": null
+        },
+        "generated_at": "2026-10-19T12:00:00Z",
+        "synthetic": true
+      }
+    }
+  ],
+  "evidence": {
+    "ev-ellis-areas": {
+      "id": "ev-ellis-areas",
+      "kind": "statement",
+      "text": "Research interests: metal additive manufacturing; in-situ process monitoring; ceramic matrix composites; high-temperature oxidation-resistant coatings; qualification of printed aerospace parts.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-grant-nasa": {
+      "id": "ev-ellis-grant-nasa",
+      "kind": "grant",
+      "text": "PI, 'Qualification Pathways for Printed Hot-Section Components', NASA, 2024-2027.",
+      "date": "2024",
+      "status": "active",
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-pub-eba": {
+      "id": "ev-ellis-pub-eba",
+      "kind": "publication",
+      "text": "'Oxidation behavior of environmental barrier coatings on SiC/SiC composites', Acta Materialia, 2024.",
+      "date": "2024",
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-patent-coating": {
+      "id": "ev-ellis-patent-coating",
+      "kind": "patent",
+      "text": "'Multilayer oxidation-resistant coating for ceramic composites', U.S. patent application.",
+      "date": "2025",
+      "status": "pending",
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-ellis-engagement": {
+      "id": "ev-ellis-engagement",
+      "kind": "engagement",
+      "text": "Co-authored a 2023 paper with engineers from an aerospace engine manufacturer. The CV states: 'Open to sponsored research and licensing discussions'.",
+      "date": "2023",
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-morgan-ellis",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-rivera-areas": {
+      "id": "ev-rivera-areas",
+      "kind": "statement",
+      "text": "Research interests: lipid nanoparticle drug delivery; mRNA therapeutics; wearable biosensors; digital biomarkers for decentralized clinical trials.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "sample-cv-synthetic-jordan-rivera",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    },
+    "ev-need-001": {
+      "id": "ev-need-001",
+      "kind": "statement",
+      "text": "Illustrative need: a turbine-engine supplier wants a university partner to improve oxidation-resistant coatings on ceramic matrix composite hot-section parts and to qualify additively manufactured components.",
+      "date": null,
+      "status": null,
+      "provenance": {
+        "source_type": "synthetic",
+        "source_ref": "illustrative need written for this sample",
+        "retrieved_at": "2026-10-19",
+        "as_of": null
+      }
+    }
+  }
+}

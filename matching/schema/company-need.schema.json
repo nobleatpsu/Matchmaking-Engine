@@ -1,0 +1,100 @@
+{
+  "$defs": {
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "source_ref": {
+          "minLength": 1,
+          "title": "Source Ref",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        }
+      },
+      "required": [
+        "source_type",
+        "source_ref",
+        "retrieved_at"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "cv",
+        "company_site",
+        "grant_db",
+        "patent_db",
+        "ott",
+        "cec_list",
+        "synthetic",
+        "sec_filing",
+        "job_posting",
+        "social_post",
+        "news",
+        "market_data",
+        "profile",
+        "openalex",
+        "linkedin"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "minLength": 1,
+      "pattern": "^\\S+$",
+      "title": "Id",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "company_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "^\\S+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Company Id"
+    },
+    "provenance": {
+      "$ref": "#/$defs/Provenance"
+    }
+  },
+  "required": [
+    "id",
+    "text",
+    "provenance"
+  ],
+  "title": "CompanyNeed",
+  "type": "object"
+}

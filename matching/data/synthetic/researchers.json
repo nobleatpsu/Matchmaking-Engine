@@ -1,0 +1,379 @@
+[
+  {
+    "id": "res-ellis",
+    "display_name": "Dr. Morgan Ellis (synthetic)",
+    "unit": "Materials Science and Engineering, College of Engineering",
+    "research_areas": [
+      "metal additive manufacturing",
+      "in-situ process monitoring",
+      "ceramic matrix composites",
+      "high-temperature oxidation-resistant coatings",
+      "qualification of printed aerospace parts"
+    ],
+    "evidence": [
+      {
+        "id": "ev-ellis-areas",
+        "kind": "statement",
+        "text": "Research interests: metal additive manufacturing; in-situ process monitoring; ceramic matrix composites; high-temperature oxidation-resistant coatings; qualification of printed aerospace parts.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-pub-meltpool",
+        "kind": "publication",
+        "text": "'Closed-loop melt-pool control for defect-free laser powder bed fusion', Additive Manufacturing, 2025.",
+        "date": "2025",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-pub-eba",
+        "kind": "publication",
+        "text": "'Oxidation behavior of environmental barrier coatings on SiC/SiC composites', Acta Materialia, 2024.",
+        "date": "2024",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-pub-ml",
+        "kind": "publication",
+        "text": "'Machine-learning detection of porosity from in-situ thermal imaging', Journal of Materials Processing Technology, 2023.",
+        "date": "2023",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-grant-nasa",
+        "kind": "grant",
+        "text": "PI, 'Qualification Pathways for Printed Hot-Section Components', NASA, 2024-2027.",
+        "date": "2024",
+        "status": "active",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-grant-afrl",
+        "kind": "grant",
+        "text": "Co-PI, 'Durable Coatings for Reusable Hypersonic Vehicles', AFRL, 2023-2026.",
+        "date": "2023",
+        "status": "active",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-grant-nsf",
+        "kind": "grant",
+        "text": "PI, 'In-Situ Monitoring for Additive Manufacturing', NSF, 2020-2023.",
+        "date": "2020",
+        "status": "completed",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-patent-meltpool",
+        "kind": "patent",
+        "text": "'Method for closed-loop control of melt-pool temperature in powder bed fusion', U.S. patent.",
+        "date": "2024",
+        "status": "granted",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-patent-coating",
+        "kind": "patent",
+        "text": "'Multilayer oxidation-resistant coating for ceramic composites', U.S. patent application.",
+        "date": "2025",
+        "status": "pending",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-sttr",
+        "kind": "sbir_sttr",
+        "text": "STTR Phase I partner, 'AM Part Qualification Software', Department of Defense, 2025.",
+        "date": "2025",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-engagement",
+        "kind": "engagement",
+        "text": "Co-authored a 2023 paper with engineers from an aerospace engine manufacturer. The CV states: 'Open to sponsored research and licensing discussions'.",
+        "date": "2023",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-advisory",
+        "kind": "engagement",
+        "text": "Technical advisory board member, regional advanced manufacturing consortium.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-ellis-industry-role",
+        "kind": "engagement",
+        "text": "Materials Engineer at an aerospace propulsion supplier (industry position), 2014-2016.",
+        "date": "2014",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-morgan-ellis",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-cv-synthetic-morgan-ellis",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  },
+  {
+    "id": "res-rivera",
+    "display_name": "Dr. Jordan Rivera (synthetic)",
+    "unit": "Biomedical Engineering, College of Engineering",
+    "research_areas": [
+      "lipid nanoparticle drug delivery",
+      "mRNA therapeutics",
+      "wearable biosensors for continuous monitoring",
+      "digital biomarkers for decentralized clinical trials"
+    ],
+    "evidence": [
+      {
+        "id": "ev-rivera-areas",
+        "kind": "statement",
+        "text": "Research interests: lipid nanoparticle drug delivery; mRNA therapeutics; wearable biosensors; digital biomarkers for decentralized clinical trials.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-pub-mrna",
+        "kind": "publication",
+        "text": "'Organ-selective lipid nanoparticles for mRNA delivery', Nature Biomedical Engineering, 2025.",
+        "date": "2025",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-pub-sweat",
+        "kind": "publication",
+        "text": "'Sweat-based continuous glucose and lactate sensing patch', Science Advances, 2024.",
+        "date": "2024",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-pub-lipid",
+        "kind": "publication",
+        "text": "'Ionizable lipid design rules for reduced hepatic accumulation', ACS Nano, 2023.",
+        "date": "2023",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-grant-nano",
+        "kind": "grant",
+        "text": "PI, 'Programmable Nanoparticles for Cancer Immunotherapy', NIH, 2023-2028.",
+        "date": "2023",
+        "status": "active",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-grant-wear",
+        "kind": "grant",
+        "text": "PI, 'Wearable Sensing for Remote Clinical Trials', NIH, 2024-2027.",
+        "date": "2024",
+        "status": "active",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-grant-scaleup",
+        "kind": "grant",
+        "text": "Co-PI, 'Manufacturing Scale-Up of Nucleic Acid Therapeutics', NSF, 2022-2025.",
+        "date": "2022",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-patent-lipid",
+        "kind": "patent",
+        "text": "'Ionizable lipid compositions for extrahepatic delivery', U.S. patent.",
+        "date": "2024",
+        "status": "granted",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-patent-sensor",
+        "kind": "patent",
+        "text": "'Flexible electrochemical sensor array for sweat analysis', U.S. patent application.",
+        "date": "2025",
+        "status": "pending",
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-sttr",
+        "kind": "sbir_sttr",
+        "text": "STTR Phase II academic partner, 'Wearable Metabolite Monitor', NIH, 2025.",
+        "date": "2025",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-trainee",
+        "kind": "engagement",
+        "text": "A former postdoctoral trainee now leads a formulation group at a large pharmaceutical company.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-pilot",
+        "kind": "engagement",
+        "text": "Completed a sponsored pilot study with a biotech company in 2024.",
+        "date": "2024",
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      },
+      {
+        "id": "ev-rivera-open",
+        "kind": "engagement",
+        "text": "The CV states: 'Open to industry collaboration and licensing'.",
+        "date": null,
+        "status": null,
+        "provenance": {
+          "source_type": "synthetic",
+          "source_ref": "sample-cv-synthetic-jordan-rivera",
+          "retrieved_at": "2026-10-19",
+          "as_of": null
+        }
+      }
+    ],
+    "provenance": {
+      "source_type": "synthetic",
+      "source_ref": "sample-cv-synthetic-jordan-rivera",
+      "retrieved_at": "2026-10-19",
+      "as_of": null
+    }
+  }
+]
