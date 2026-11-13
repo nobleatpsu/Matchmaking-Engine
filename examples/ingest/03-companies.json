@@ -1,0 +1,8 @@
+{
+  "entity": "companies",
+  "source": { "sourceId": "src-import", "label": "OSVPR industry leads list" },
+  "records": [
+    { "name": "Example Energy Storage Co.", "industry": "Energy storage", "website": "example-storage.com" },
+    { "name": "Example Semiconductors" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "entity": "faculty",
+  "source": { "sourceId": "src-directory", "label": "Example department directory" },
+  "records": [
+    {
+      "name": "Example Researcher",
+      "title": "Associate Professor",
+      "department": "Materials Science and Engineering",
+      "email": "exr123@psu.edu",
+      "externalIds": { "orcid": "0000-0000-0000-0000", "psu": "exr123" },
+      "summary": "Studies solid electrolytes and interfaces for next-generation batteries.",
+      "keywords": ["solid electrolytes", "battery interfaces", "electron microscopy"],
+      "profileUrl": "https://www.example.edu/directory/exr123"
+    }
+  ]
+}

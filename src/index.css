@@ -1,0 +1,196 @@
+@import '@fontsource-variable/roboto';
+@import '@fontsource-variable/roboto-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens — "institutional precision".
+ * Every color is an RGB triplet so Tailwind can apply alpha (bg-ink/10).
+ * Light theme is the reference; dark is designed separately, not inverted.
+ * Penn State digital palette: Nittany Navy #001E44 · Beaver Blue #1E407C · Pugh Blue #96BEE6.
+ */
+:root {
+  /* Surfaces: warm paper canvas, white working surfaces */
+  --canvas: 246 245 241;
+  --surface: 255 255 255;
+  --raised: 255 255 255;
+  --subtle: 240 239 234;
+  --sunken: 234 232 226;
+  --line: 226 224 216;
+  --line-strong: 205 202 192;
+
+  /* Text — navy-tinted inks, all ≥ 4.5:1 on surface */
+  --ink: 13 24 41;
+  --ink-2: 49 60 75;
+  --ink-3: 83 93 106;
+  --ink-4: 100 108 119;
+
+  /* Brand */
+  --navy: 0 30 68;          /* Nittany Navy */
+  --navy-2: 30 64 124;      /* Beaver Blue */
+  --pugh: 150 190 230;      /* Pugh Blue */
+  --rail: 0 30 68;
+  --rail-ink: 255 255 255;
+
+  /* Interactive accent = Beaver Blue; hover deepens to Nittany Navy */
+  --accent: 30 64 124;
+  --accent-hover: 0 30 68;
+  --accent-soft: 234 241 250;
+  --accent-line: 193 214 239;
+  --on-accent: 255 255 255;
+  --focus: 30 100 200;
+
+  /* Semantic states — always paired with an icon or a label */
+  --good: 22 112 72;
+  --good-soft: 231 243 236;
+  --warn: 146 86 0;
+  --warn-soft: 251 242 224;
+  --bad: 176 36 28;
+  --bad-soft: 251 235 233;
+  --info: 30 64 124;
+  --info-soft: 234 241 250;
+  --talent: 11 105 117;
+  --talent-soft: 226 242 243;
+  --brandx: 120 86 10;
+  --brandx-soft: 248 241 222;
+  --demo: 156 98 0;
+  --demo-soft: 252 244 225;
+
+  /* Data visualisation ramp (sequential Beaver Blue) */
+  --viz-1: 0 30 68;
+  --viz-2: 30 64 124;
+  --viz-3: 74 115 178;
+  --viz-4: 150 190 230;
+  --viz-5: 205 224 244;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasis: cubic-bezier(0.3, 0, 0, 1.1);
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 240ms;
+
+  color-scheme: light;
+}
+
+/* Dark theme: navy night, not an inversion. Accent shifts to Pugh Blue for contrast. */
+:root[data-theme='dark'] {
+  --canvas: 8 14 26;
+  --surface: 13 21 36;
+  --raised: 18 28 46;
+  --subtle: 21 31 50;
+  --sunken: 6 11 21;
+  --line: 32 44 66;
+  --line-strong: 50 65 92;
+
+  --ink: 232 237 244;
+  --ink-2: 196 205 218;
+  --ink-3: 156 168 186;
+  --ink-4: 132 145 165;
+
+  --rail: 4 14 30;
+  --rail-ink: 255 255 255;
+
+  --accent: 150 190 230;
+  --accent-hover: 186 212 240;
+  --accent-soft: 24 42 70;
+  --accent-line: 44 72 112;
+  --on-accent: 0 30 68;
+  --focus: 150 190 230;
+
+  --good: 98 196 146;
+  --good-soft: 16 44 34;
+  --warn: 232 172 82;
+  --warn-soft: 48 36 14;
+  --bad: 244 128 118;
+  --bad-soft: 56 22 22;
+  --info: 150 190 230;
+  --info-soft: 24 42 70;
+  --talent: 96 196 206;
+  --talent-soft: 14 42 48;
+  --brandx: 222 186 108;
+  --brandx-soft: 46 38 16;
+  --demo: 236 178 80;
+  --demo-soft: 44 33 12;
+
+  --viz-1: 186 212 240;
+  --viz-2: 150 190 230;
+  --viz-3: 104 148 204;
+  --viz-4: 64 102 160;
+  --viz-5: 36 60 100;
+
+  color-scheme: dark;
+}
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+  body { @apply bg-canvas text-ink font-sans text-base; font-optical-sizing: auto; }
+  ::selection { background: rgb(var(--pugh) / 0.45); }
+  :focus-visible { outline: 2px solid rgb(var(--focus)); outline-offset: 2px; border-radius: 3px; }
+  input, textarea, select, button { font: inherit; color: inherit; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  code, kbd { font-family: theme('fontFamily.mono'); }
+}
+
+@layer components {
+  /* Containers */
+  .panel { @apply bg-surface border border-line rounded-lg; }
+  .panel-head { @apply flex items-center justify-between gap-3 px-4 h-10 border-b border-line; }
+  .panel-title { @apply text-[13px] font-semibold text-ink tracking-[-0.005em]; }
+  .ruled { @apply border-t border-line; }
+
+  /* Type roles */
+  .eyebrow { @apply text-[10.5px] font-semibold uppercase tracking-[0.09em] text-ink-3; }
+  .meta { @apply text-[11.5px] leading-4 text-ink-3 tabular; }
+  .mono { @apply font-mono text-[11px] leading-4 text-ink-3 tabular; letter-spacing: -0.02em; }
+  .figure { @apply font-semibold tabular tracking-[-0.02em] text-ink; }
+  .link { @apply text-accent hover:text-accent-hover underline-offset-2 hover:underline; }
+
+  .row-hover { @apply transition-colors duration-fast hover:bg-subtle/70; }
+  .scroll-thin { scrollbar-width: thin; scrollbar-color: rgb(var(--line-strong)) transparent; }
+
+  .skeleton { @apply relative overflow-hidden bg-subtle rounded; }
+  .skeleton::after {
+    content: ''; position: absolute; inset: 0; transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(var(--surface) / 0.65), transparent);
+    animation: shimmer 1.4s infinite;
+  }
+
+  .input {
+    @apply w-full h-8 px-2.5 rounded-md border border-line bg-surface text-sm text-ink placeholder:text-ink-4
+      transition-[border-color,box-shadow] duration-fast hover:border-line-strong focus:outline-none focus:border-accent focus:shadow-ring;
+  }
+  .input[aria-invalid='true'] { @apply border-bad focus:shadow-[0_0_0_3px_rgb(var(--bad)/0.15)]; }
+  textarea.input { @apply h-auto py-2 leading-relaxed resize-y; }
+  .kbd { @apply inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-sm border border-line bg-surface text-[10.5px] text-ink-3 font-mono; }
+
+  /* Demo workspace: a hatched amber edge, used sparingly so it stays meaningful */
+  .demo-hatch {
+    background-image: repeating-linear-gradient(-45deg, rgb(var(--demo) / 0.22) 0 6px, transparent 6px 12px);
+  }
+  /* "Not assessed" — absence of data, never equal to zero */
+  .unknown-hatch {
+    background-image: repeating-linear-gradient(45deg, rgb(var(--subtle)) 0 4px, rgb(var(--line)) 4px 6px);
+  }
+}
+
+/* Avatar initials use a per-name hue; lift it toward white on dark surfaces for contrast. */
+:root[data-theme='dark'] .avatar { color: color-mix(in srgb, rgb(var(--av)) 35%, white) !important; background: rgb(var(--av) / 0.28) !important; }
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
+}
+
+@media print {
+  :root { color-scheme: light; }
+  body { background: white; }
+  .no-print { display: none !important; }
+  .print-page { box-shadow: none !important; border: none !important; max-width: none !important; padding: 0 !important; }
+  @page { margin: 18mm 16mm; }
+}
